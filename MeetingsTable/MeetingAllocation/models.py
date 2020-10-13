@@ -7,3 +7,6 @@ class Meeeting(models.Model):
     Date = models.DateField()
     Time = models.TimeField(default=time(9))
     Duration = models.IntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.Title} will be held on {self.Date} at {self.Time} for {self.Duration} hour/s"    
