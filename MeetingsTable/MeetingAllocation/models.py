@@ -10,3 +10,11 @@ class Meeeting(models.Model):
 
     def __str__(self):
         return f"{self.Title} will be held on {self.Date} at {self.Time} for {self.Duration} hour/s"    
+
+class Room(models.Model):
+    Name = models.CharField(max_length=20)
+    Floor = models.IntegerField()
+    No = models.IntegerField()
+
+    def __str__(self):
+        return f"Meeting is being held in the floor {self.Floor} :{self.no} {self.Name}"     
