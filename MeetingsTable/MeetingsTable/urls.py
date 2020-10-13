@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Meetings.views import Welcome
+from Meetings.views import Welcome,About
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Welcome),
+    path('About',About)
 ]
