@@ -5,6 +5,6 @@ from MeetingAllocation.models import Meeeting
 # Create your views here.
 def Welcome(request):
     return render(request,"Meetings/welcome.html",
-    {"message" : Meeeting.objects.count()})
+    {"meetings" : Meeeting.objects.all()})
 def About(request):
     return HttpResponse("An effective meeting planner")    

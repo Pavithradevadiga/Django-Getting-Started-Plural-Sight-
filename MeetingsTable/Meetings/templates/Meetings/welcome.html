@@ -6,6 +6,15 @@
     </head>
     <body>
           <p>A Meeting Planner for Django Practice</p>
-          <p>{{message}} Meeting/s are scheduled in database</p>
+          <h2>MEETING</h2>
+          <ul>
+              {% for meeting in meetings %}
+              <li>
+                  <a href="Meeting/{{meeting.id}}">
+                    {{meeting.Title}}
+                  </a>
+              </li>
+              {% endfor %}
+          </ul>
     </body>
 </html>    
