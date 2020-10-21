@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <title>RoomDetails</title>
+    </head>
+    <body>
+        <strong>RoomDetails</strong>
+        <br/>
+        <br/>
+        {% for room in rooms %} 
+        <li>
+            The  {{room.Name}} is in the floor {{room.Floor}} and RoomNo {{room.No}}
+        </li>
+        {% endfor %}  
+              <p>To return to Homepage 
+              <a href="{% url 'Welcome' %}">Home</a> 
+          </p>
+    </body>
+</html>    
