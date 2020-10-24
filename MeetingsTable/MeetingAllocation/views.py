@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
 from django.forms import modelform_factory
 
 # Create your views here.
@@ -14,5 +14,11 @@ def roomdetail(request):
 MeetingForm = modelform_factory(Meeeting,exclude=[])
 
 def new(request):
-    form = MeetingForm()
+    if request.method == "POST":
+        form = MeetingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("Welcome")
+    else:    
+        form = MeetingForm()
     return render(request,'MeetingAllocation/new.html',{"form": form})
