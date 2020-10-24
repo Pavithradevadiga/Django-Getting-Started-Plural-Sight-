@@ -1,15 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-    <head>
-         <meta charset="UTF-8">
-         <title>TimetablePlanner</title>
-         <link rel="stylesheet" href="{% static 'Meetings/style.css' %}">
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
           <p>A Meeting Planner for Django Practice</p>
           <h2>MEETING</h2>
-          <img src="{% static 'Meetings/planner.jpg' %}" width="100px">
           <ul>
               {% for meeting in meetings %}
               <li>
@@ -24,5 +17,4 @@
                 Room Details
               </a></strong>
           </ul>
-    </body>
-</html>    
+ {% endblock %}  

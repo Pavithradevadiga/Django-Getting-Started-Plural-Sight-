@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-         <meta charset="UTF-8">
-         <title>RoomDetails</title>
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block title %}Room: {{room.Name}} {% endblock %}
+{% block content %}
         <strong>RoomDetails</strong>
         <br/>
         <br/>
@@ -16,5 +12,4 @@
               <p>To return to Homepage 
               <a href="{% url 'Welcome' %}">Home</a> 
           </p>
-    </body>
-</html>    
+{% endblock %}   

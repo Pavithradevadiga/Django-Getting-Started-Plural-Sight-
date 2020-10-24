@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-         <meta charset="UTF-8">
-         <title>{{meeting.Title}}</title>
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block title %}Meeting: {{meeting.Title}} {% endblock %}
+{% block content %}
           <b>{{meeting.Title}}</b>
           <p>{{meeting.Title}} meeting will be held at {{meeting.Date}}/{{meeting.Time}} for {{meeting.Duration}}hour/s in {{meeting.room}}</p>
           <p>To return to Homepage 
               <a href="{% url 'Welcome' %}">Home</a>
           </p>
-    </body>
-</html>    
+{% endblock %}          
+             
